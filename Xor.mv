@@ -1,0 +1,11 @@
+function Xor 0
+    push argument 0
+    push argument 1
+    not
+    and
+    push argument 0
+    not
+    push argument 1
+    and
+    or
+    return
