@@ -1,0 +1,46 @@
+push argument 0
+push constant 0
+lt
+if-goto lessthenzero
+goto postive
+
+label lessthenzero
+    push constant 1
+    pop argument 2
+
+    push argument 0
+    push constant 32767
+    push constant 1
+    add
+    neg
+    eq
+    if-goto OVERFLOW
+
+    push constant 0
+    pop argument 3
+
+    push argument 0
+    neg
+    pop argument 1
+
+    goto END
+
+label OVERFLOW
+    push constant 1
+    pop argument 3
+    goto END
+
+label postive
+    push constant 0
+    pop argument 2
+
+    push constant 0
+    pop argument 3
+
+    push argument 0
+    pop argument 1
+
+    goto END
+
+label END
+

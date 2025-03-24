@@ -1,0 +1,43 @@
+push argument 0
+pop temp 0
+
+push constant 0
+pop temp 1
+
+push temp 0
+push constant 0
+lt
+if-goto if
+goto else
+
+label if
+  push temp 0
+  neg
+  pop temp 0
+  goto else
+
+label else
+
+push temp 0
+pop temp 2
+
+label LOOP
+  push temp 2
+  push constant 0
+  eq
+  if-goto endloop
+
+  push temp 1
+  push temp 0
+  add
+  pop temp 1
+
+  push temp 2
+  push constant 1
+  sub
+  pop temp 2
+
+  goto LOOP
+
+label endloop
+push temp 1
