@@ -1,0 +1,4 @@
+dig @198.41.0.4 www.asda.com +norecurse
+dig @192.41.162.30 www.asda.com +norecurse
+dig @108.162.192.108 www.asda.com +norecurse
+dig @173.245.59.139 www.asda.com +norecurse
